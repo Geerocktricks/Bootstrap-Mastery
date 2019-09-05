@@ -1,0 +1,22 @@
+{
+  "name": "bootstrapmastery",
+  "version": "1.0.0",
+  "description": "Andela Bootstrap mastery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Geerocktricks/Bootstrap-Mastery.git"
+  },
+  "author": "Gerald Waweru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Geerocktricks/Bootstrap-Mastery/issues"
+  },
+  "homepage": "https://github.com/Geerocktricks/Bootstrap-Mastery#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
