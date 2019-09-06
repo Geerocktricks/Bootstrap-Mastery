@@ -6,7 +6,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css.map">
   <link rel="stylesheet" href="/css/styles.css">
   <title>Space School</title>
@@ -48,7 +49,12 @@
         <h1>Lessons</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="row mb-3">
+      <div class="col">
+          <input class="form-control" id="searchInput" type="text" placeholder="Search..">
+      </div>
+    </div>
+    <div class="row" id="lessonList">
       <div class="col-12 col-lg-4">
         <div class="card mb-5 border-white shadow">
           <img src="/img/spacewalk.jpeg" alt="card-image" class="card-image-top" style="height: 300px;">
@@ -109,6 +115,16 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script src="/jquery/script.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#searchInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#lessonList .col-12").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
