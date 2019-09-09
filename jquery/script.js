@@ -1,3 +1,4 @@
+$breadcrumb-divider: quote(">");
 $(document).ready(function() {
    console.log("document is ready");
      
